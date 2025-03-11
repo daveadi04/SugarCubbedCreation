@@ -1,0 +1,158 @@
+.hero {
+    height: 100vh;
+    background: linear-gradient(180deg, rgb(255, 184, 184), rgb(255, 253, 253) 80%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    gap: 0px;
+
+        position: relative;
+       
+
+}
+
+.hero-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0px;
+    text-align: left;
+}
+
+
+.hero-left h2 {
+    color: black;
+    font-size: 3vw; /* Makes the font responsive */
+    font-weight: 600;
+    max-width: 300%;
+    display: inline-block;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+   
+}
+
+
+.hero-left p {
+    color: rgb(0, 0, 0);
+    font-size: 2.2vw;
+    font-weight: 500;
+   
+}
+.hero-left h2:hover{
+    transform: scale(1.05);
+    box-shadow: none; 
+   
+}
+
+
+.hero-latest-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 150px;
+    height: 45px;
+    border-radius: 50px;
+    margin-top: 20px;
+    background: rgb(14, 13, 13);
+    color: rgb(248, 238, 238);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.hero-latest-btn:hover {
+    background: rgb(249, 150, 170);
+    color: white;
+    transform: scale(1.05);
+}
+
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+.hero-right img {
+   
+    width: 150%;
+    height: 150%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 100%;
+  
+    
+}
+.hero-right img:hover {
+    transform: translateY(-10px) rotateX(10deg) rotateY(5deg);
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.3), 
+                -15px -15px 30px rgba(255, 255, 255, 0.1);
+}
+
+.hero-right img:hover {
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        height: auto;
+        padding: 50px 5%;
+    }
+
+    .hero-left {
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero-left h2 {
+        font-size: 6vw;
+    }
+
+    .hero-left p {
+        font-size: 5vw;
+    }
+
+    .hero-right img {
+        width: 80%;
+        height: auto;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-left {
+        align-items: center;
+    }
+
+    .hero-left h2 {
+        font-size: 7vw;
+    }
+
+    .hero-left p {
+        font-size: 6vw;
+    }
+
+    .hero-latest-btn {
+        width: 120px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .hero-right img {
+        width: 80%;
+        height: auto;
+    }
+}
